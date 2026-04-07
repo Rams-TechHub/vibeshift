@@ -46,7 +46,34 @@ VibeShift leverages state-of-the-art Source Separation (Spleeter/Demucs) and Dig
 1. Clone the repo: `git clone https://github.com/your-username/VibeShift.git`
 2. Create virtual env: `python -m venv venv`
 3. Activate: `source venv/bin/activate` (Mac/Linux) or `venv\Scripts\activate` (Windows)
-4. Install dependencies: `pip install flask spleeter librosa pedalboard`
+4. pip install -r requirements.txt
+5. System Prerequisite: Ensure you have FFmpeg installed on your computer. Spleeter uses it to decode the MP3s. If you don't have it, the app will throw an error when it tries to separate the stem
+   ffmpeg -version
+    • If installed: You’ll see a wall of text showing the version number and configuration details.
+    • If NOT installed: You’ll see an error like "ffmpeg" is not recognized... or command not found.
+    Installation Steps (By OS)
+    If it’s missing, here is the fastest way to get it for VibeShift:
+    Windows
+    1. Download: Go to gyan.dev and download the ffmpeg-git-full.7z (or .zip) from the "release builds" section.
+    2. Extract: Unzip it and move the folder to C:\ffmpeg.
+    3. Add to Path (Crucial):
+        • Search for "Edit the system environment variables" in Windows Start.
+        • Click Environment Variables.
+        • Under "System variables," find Path, select it, and click Edit.
+        • Click New and paste: C:\ffmpeg\bin.
+        • Click OK on all windows.
+    4. Restart your Terminal for the changes to take effect.
+
+    macOS
+    The easiest way is using Homebrew:
+        brew install ffmpeg
+    Linux
+        sudo apt update
+        sudo apt install ffmpeg
+    
+
+6. Launch the App
+    python app.py
 
 ---
 
