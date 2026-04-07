@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Audio Processing Temp Files
+uploads/
+output/
+*.mp3
+*.wav
+
+# System
+.DS_Store
+local.properties
